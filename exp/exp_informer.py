@@ -218,7 +218,7 @@ class Exp_Informer(Exp_Basic):
         plt.legend()
 
         # Grafik kaydetme
-        plt.savefig(os.path.join( './results/' + setting + '/training_loss_graph.png'))
+        plt.savefig( './results/' + setting + '/training_loss_graph.png')
         plt.close()
         end_training_time = time.time()
         total_training_time = end_training_time - start_training_time
