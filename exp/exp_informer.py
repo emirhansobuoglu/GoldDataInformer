@@ -216,9 +216,11 @@ class Exp_Informer(Exp_Basic):
         plt.xlabel('Epochs')
         plt.ylabel('Loss')
         plt.legend()
-
+        folder_path = './results/' + setting +'/'
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
         # Grafik kaydetme
-        plt.savefig( './results/' + setting + '/training_loss_graph.png')
+        plt.savefig( folder_path + 'training_loss_graph.png')
         plt.close()
         end_training_time = time.time()
         total_training_time = end_training_time - start_training_time
